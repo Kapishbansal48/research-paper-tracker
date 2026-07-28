@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  background-color: #FAF9F5;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #1B2A4A;
+}
+
+::selection {
+  background: #D9AE6E;
+  color: #121C33;
+}
+
+/* Card-catalog punch holes, used sparingly on the hero */
+.punch-holes::before,
+.punch-holes::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #FAF9F5;
+  border: 1px solid #E4E1D6;
+}
+.punch-holes::before { left: 18px; }
+.punch-holes::after { right: 18px; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
